@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String sessionID=(String) session.getAttribute("sessionID");  	
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,8 +21,19 @@
 		</div>
 		<div>
 			<ul class="navbar-nav mr-auto">
+				<%
+					System.out.println("error : "+sessionID);
+					if(sessionID==null){
+				%>
 				<li class="nav-item"><a class="nav-link" href="../member/loginMember.jsp">로그인</a></li>
 				<li class="nav-item"><a class="nav-link" href="../member/addMember.jsp">회원가입</a></li>
+				<%
+					}else {
+				%>
+				<li style="padding-top:7px; color:white">[<%=sessionID %>님 환영합니다.]</li>
+				<li class="nav-item"><a class="nav-link" href="../member/logoutMember.jsp">로그아웃</a></li>
+				<li class="nav-item"><a class="nav-link" href="../member/updateMember.jsp">회원수정</a></li>
+				<%} %>
 				<li class="nav-item"><a class="nav-link" href="../jsp/products.jsp">상품목록</a></li>
 				<li class="nav-item"><a class="nav-link" href="../jsp/addProduct.jsp">상품등록</a></li>
 				<li class="nav-item"><a class="nav-link" href="../jsp/addProduct.jsp?edit=update">상품수정</a></li>
