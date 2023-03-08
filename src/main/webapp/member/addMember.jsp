@@ -51,9 +51,11 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">생일</label>
+				<label class="col-sm-2" for="birthy">생일</label>
 				<div class="col-sm-4">
-					<input type="date" name="birth">
+					<input name="birthy" id="birthy" type="text" class="form-control" placeholder="yyyy">년
+					<input name="birthy" id="birthm" type="text" class="form-control" placeholder="mm">월
+					<input name="birthy" id="birthd" type="text" class="form-control" placeholder="dd">일
 				</div>
 			</div>
 			<div class="form-group row">
