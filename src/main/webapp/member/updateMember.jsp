@@ -13,9 +13,9 @@ try {
 	rs=pstmt.executeQuery();
 	if(rs.next()){
 		String password=rs.getString("password");
-		String =rs.getString("");
-		String =rs.getString("");
-		String =rs.getString("");
+		String name=rs.getString("name");
+		String gender=rs.getString("gender");
+		String birth=rs.getString("birth");
 		String =rs.getString("");
 		String =rs.getString("");
 		String =rs.getString("");

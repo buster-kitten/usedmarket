@@ -8,7 +8,7 @@
 	String password = request.getParameter("password");
 	String name = request.getParameter("name");
 	String gender = request.getParameter("gender");
-	String birth = request.getParameter("birth");
+	String birth = request.getParameter("birthy")+"/"+request.getParameter("birthm")+"/"+request.getParameter("birthd");
 	String mail1 = request.getParameter("mail");
 	String mail2 = request.getParameterValues("mail2")[0];
 	String mail = mail1 + "@" + mail2;

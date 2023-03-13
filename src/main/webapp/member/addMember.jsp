@@ -20,49 +20,49 @@
 		<form name="newMember" class="form-horizontal" action="processAddMember.jsp" method="post" onsubmit="return checkForm()">
 			<div class="form-group row">
 				<label class="col-sm-2" for="id">아이디</label>
-				<div class="col-sm-3">
+				<div class="col-sm-5">
 					<input name="id" id="id" type="text" class="form-control" placeholder="id">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2" for="password">비밀번호</label>
-				<div class="col-sm-3">
+				<div class="col-sm-5">
 					<input name="password" id="password" type="text" class="form-control" placeholder="password">
 				</div>
 			</div>	
 			<div class="form-group row">
 				<label class="col-sm-2" for="password_confirm">비밀번호 확인</label>
-				<div class="col-sm-3">
+				<div class="col-sm-5">
 					<input name="password_confirm" id="password_confirm" type="text" class="form-control" placeholder="password_confirm">
 				</div>
 			</div>	
 			<div class="form-group row">
 				<label class="col-sm-2" for="name">성명</label>
-				<div class="col-sm-3">
+				<div class="col-sm-5">
 					<input name="name" id="name" type="text" class="form-control" placeholder="name">
 				</div>
 			</div>	
 			<div class="form-group row">
 				<label class="col-sm-2">성별</label>
 				<div class="col-sm-10">
-					<input name="gender" type="radio" id="m" value="남"><label for="m">남</label>&nbsp;
-					<input name="gender" type="radio" id="w" value="여"><label for="w">여</label>&nbsp;
-					<input name="gender" type="radio" id="o" value="기타"><label for="o">기타</label>
+					<input name="gender" type="radio" id="m" value="남">&nbsp;<label for="m">남</label>&nbsp;
+					<input name="gender" type="radio" id="w" value="여">&nbsp;<label for="w">여</label>&nbsp;
+					<input name="gender" type="radio" id="o" value="기타">&nbsp;<label for="o">기타</label>
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2" for="birthy">생일</label>
-				<div class="col-sm-4">
-					<input name="birthy" id="birthy" type="text" class="form-control" placeholder="yyyy">년
-					<input name="birthy" id="birthm" type="text" class="form-control" placeholder="mm">월
-					<input name="birthy" id="birthd" type="text" class="form-control" placeholder="dd">일
+				<div class="col-sm-5 input-group">
+					<input name="birthy" id="birthy" type="text" class="form-control" placeholder="yyyy">&nbsp;년&nbsp;
+					<input name="birthy" id="birthm" type="text" class="form-control" placeholder="mm">&nbsp;월&nbsp;
+					<input name="birthy" id="birthd" type="text" class="form-control" placeholder="dd">&nbsp;일&nbsp;
 				</div>
-			</div>
+			</div>		
 			<div class="form-group row">
 				<label class="col-sm-2">이메일</label>
-				<div class="col-sm-10">
-					<input type="text" name="mail" maxlength="50" class="form-control col-sm-2">@
-					<select name="mail2">
+				<div class="col-sm-5 input-group">
+					<input type="text" name="mail" class="form-control">&nbsp;@&nbsp;
+					<select name="mail2"  class="form-control">
 						<option>직접입력</option>
 						<option>naver.com</option>
 						<option>gmail.com</option>
@@ -74,7 +74,7 @@
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2" for="phone">휴대전화</label>
-				<div class="col-sm-3">
+				<div class="col-sm-5">
 					<input name="phone" id="phone" type="text" class="form-control" placeholder="phone">
 				</div>
 			</div>
