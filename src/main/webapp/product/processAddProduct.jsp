@@ -9,14 +9,15 @@
 	request.setCharacterEncoding("UTF-8");
 
 	String filename="";
-	String realFolder="C:\\workspace\\UsedMarket\\src\\main\\webapp\\thumbnail";
+	String realFolder="C:\\java_work\\UsedMarket\\src\\main\\webapp\\thumbnail";
 	String encType="utf-8";
 	int maxSize=5*1024*1024;
 	
 	MultipartRequest multi=new MultipartRequest(request,realFolder,maxSize,encType,new DefaultFileRenamePolicy());
 	
 	String productId=multi.getParameter("productId");
-	String name=multi.getParameter("name");
+	String productname=multi.getParameter("productname");
+	String username=multi.getParameter("username");
 	String unitPrice=multi.getParameter("unitPrice");
 	String description=multi.getParameter("description");
 	String manufacturer=multi.getParameter("manufacturer");
@@ -41,17 +42,18 @@
 	String fname=(String)files.nextElement();
 	String fileName=multi.getFilesystemName(fname);
 	PreparedStatement pstmt=null;
-	String sql="insert into product22 values(?,?,?,?,?,?,?,?,?)";
+	String sql="insert into product22 values(?,?,?,?,?,?,?,?,?,?)";
 	pstmt=conn.prepareStatement(sql);
 	pstmt.setString(1, productId);
-	pstmt.setString(2, name);
-	pstmt.setInt(3, price);
-	pstmt.setString(4, description);
-	pstmt.setString(5, category);
-	pstmt.setString(6, manufacturer);
-	pstmt.setLong(7, stock);
-	pstmt.setString(8, condition);
-	pstmt.setString(9, fileName);
+	pstmt.setString(2, productname);
+	pstmt.setString(3, username);
+	pstmt.setInt(4, price);
+	pstmt.setString(5, description);
+	pstmt.setString(6, category);
+	pstmt.setString(7, manufacturer);
+	pstmt.setLong(8, stock);
+	pstmt.setString(9, condition);
+	pstmt.setString(10, fileName);
 	pstmt.executeUpdate();
 	
 	response.sendRedirect("products.jsp");
